@@ -5,6 +5,7 @@ A collection of plugins for Jekyll:
 
 - call to action block tag
 - numbers tag
+- quote tag
 
 ## Installation
 
