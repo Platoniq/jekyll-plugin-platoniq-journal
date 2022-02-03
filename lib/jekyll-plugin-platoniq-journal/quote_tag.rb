@@ -18,16 +18,14 @@ module Jekyll
 
       output = []
 
-      output << %(<figure class="pj-quote">)
+      output << %(<blockquote class="pj-quote">)
+      output << Kramdown::Document.new(text).to_html if text
       output << <<~QUOTE
-        <blockquote>
-          #{Kramdown::Document.new(text).to_html if text}
-        </blockquote>
-        <figcaption>
+        <cite>
           #{jdata["author"]}
-        </figcaption>
+        </cite>
       QUOTE
-      output << %(</figure>)
+      output << %(</blockquote>)
 
       output.join
     end
