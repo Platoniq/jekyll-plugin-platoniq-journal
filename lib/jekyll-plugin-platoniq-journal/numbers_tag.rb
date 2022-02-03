@@ -23,8 +23,9 @@ module Jekyll
             <strong>
               #{value}
             </strong>
-            <br>
-            #{key}
+            <span class="pj-number--description">
+              #{key}
+            </span>
           </li>
         NUM
       end

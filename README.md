@@ -5,6 +5,7 @@ A collection of plugins for Jekyll:
 
 - call to action block tag
 - numbers tag
+- links tag
 
 ## Installation
 
@@ -35,6 +36,18 @@ Tags can be used in a `.md` file
 
 ```
 {% numbers {"first label":"0.123", "second label":"50%", "third label": "123"} %}
+```
+
+### links tag
+
+```
+{% links {
+    "title": "Our references", "items": [
+            { "url": "https://platoniq.net", "title": "Link to the galaxy and beyond"},
+            { "url": "https://platoniq.net", "title": "Visit Planet Toniq"}
+        ]
+    }
+%}
 ```
 
 ## License
