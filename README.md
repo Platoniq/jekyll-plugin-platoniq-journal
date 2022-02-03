@@ -6,6 +6,7 @@ A collection of plugins for Jekyll:
 - call to action block tag
 - numbers tag
 - links tag
+- quote tag
 
 ## Installation
 
@@ -48,6 +49,14 @@ Tags can be used in a `.md` file
         ]
     }
 %}
+```
+
+### quote block tag
+
+```
+{% quote {"author":"Britney Shakespears"} %}
+To quote or not to quote: That is the question.
+{% endquote %}
 ```
 
 ## License
