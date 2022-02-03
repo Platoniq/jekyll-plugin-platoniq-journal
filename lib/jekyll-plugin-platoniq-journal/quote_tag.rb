@@ -24,7 +24,7 @@ module Jekyll
           #{Kramdown::Document.new(text).to_html if text}
         </blockquote>
         <figcaption>
-          &mdash; #{jdata["author"]}
+          #{jdata["author"]}
         </figcaption>
       QUOTE
       output << %(</figure>)
