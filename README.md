@@ -41,7 +41,7 @@ Tags can be used in a `.md` file
 
 ```
 {% quote {"author":"Britney Shakespears"} %}
-To quote or not to quote: *That* is the question.
+To quote or not to quote: That is the question.
 {% endquote %}
 ```
 
