@@ -37,6 +37,15 @@ Tags can be used in a `.md` file
 {% numbers {"first label":"0.123", "second label":"50%", "third label": "123"} %}
 ```
 
+### quote block tag
+
+```
+{% quote {"author":"Britney Shakespears"} %}
+To quote or not to quote: *That* is the question.
+{% endquote %}
+```
+
+
 ## License
 
 The theme is available as open source under the terms of the [GNU AFFERO GENERAL PUBLIC LICENSE](https://opensource.org/licenses/AGPL-3.0).
