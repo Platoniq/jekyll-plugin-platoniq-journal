@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-plugin-platoniq-journal"
-  spec.version       = "0.0.2"
+  spec.version       = "0.0.3"
   spec.authors       = ["Agustí B.R."]
   spec.email         = ["agusti@platoniq.net"]
 
@@ -18,5 +18,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "jekyll", "~> 4.2"
   spec.add_dependency "kramdown", "~> 2.3"
   spec.add_development_dependency "bundler", "> 1.0", "< 3.0"
+  spec.add_development_dependency "byebug"
   spec.add_development_dependency "rubocop-jekyll", "~> 0.12"
 end
