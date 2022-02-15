@@ -45,12 +45,11 @@ module Jekyll
     end
 
     def icon_file_path
-      # @icon_file_path ||=
-      if !jdata.nil? && !jdata["icon"].empty?
-        jdata["icon"]
-      else
-        "svg/icon-quote.liquid"
-      end
+      @icon_file_path ||= if !jdata.nil? && jdata["icon"]
+                            jdata["icon"]
+                          else
+                            "svg/icon-quote.liquid"
+                          end
     end
 
     def quote(text, icon)
@@ -64,7 +63,7 @@ module Jekyll
     end
 
     def author
-      if !jdata.nil? && !jdata["author"].empty?
+      if !jdata.nil? && jdata["author"]
         @author ||= <<~AUTHOR
           <figcaption class="pj-quote--author">
             #{t_authored_by} #{jdata["author"]}
