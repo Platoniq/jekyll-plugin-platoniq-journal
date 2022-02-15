@@ -53,8 +53,20 @@ Tags can be used in a `.md` file
 
 ### quote block tag
 
+Basic quote block:
+
+```liquid
+{% quote %}
+To quote or not to quote: That is the question.
+{% endquote %}
 ```
-{% quote {"author":"Britney Shakespears"} %}
+
+Quote block with params:
+
+```liquid
+{% quote { "author": "Bitnet Shakespeares", 
+           "icon": "svg/icon-quote_alt.liquid"} %}
+
 To quote or not to quote: That is the question.
 {% endquote %}
 ```
