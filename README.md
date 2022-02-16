@@ -52,7 +52,7 @@ Quote block with params:
 
 ```liquid
 {% quote { "author": "Wwwilliam Shakespeare", 
-           "icon": "svg/icon-quote_alt.liquid"} %}
+           "icon": "svg/icon-quote_alt.liquid" } %}
 
 To quote or not to quote: That is the question.
 {% endquote %}
