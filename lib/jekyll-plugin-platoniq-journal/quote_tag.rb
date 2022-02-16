@@ -3,7 +3,9 @@
 # require "byebug"
 
 module Jekyll
-  class QuoteBlockTag < LocalizedBlock
+  class QuoteBlockTag < Liquid::Block
+    include JekyllPluginPlatoniqJournal::Base
+
     def initialize(tag_name, input, tokens)
       super
       @input = input

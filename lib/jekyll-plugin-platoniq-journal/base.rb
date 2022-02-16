@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Jekyll
-  class LocalizedBlock < Liquid::Block
+module JekyllPluginPlatoniqJournal
+  module Base
     def site
       @site ||= @context.registers[:site]
     end
