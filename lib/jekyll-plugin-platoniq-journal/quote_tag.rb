@@ -3,7 +3,7 @@
 # require "byebug"
 
 module Jekyll
-  class QuoteBlockTag < Liquid::Block
+  class QuoteBlockTag < LocalizedBlock
     def initialize(tag_name, input, tokens)
       super
       @input = input
@@ -30,14 +30,6 @@ module Jekyll
 
     def jdata
       @jdata ||= JSON.parse(@input) if !@input.nil? && !@input.empty?
-    end
-
-    def page
-      @page ||= @context.registers[:page].to_liquid
-    end
-
-    def page_locale
-      @page_locale ||= page["locale"] || "en"
     end
 
     def site
@@ -67,14 +59,10 @@ module Jekyll
       if !jdata.nil? && !jdata["author"].empty?
         @author ||= <<~AUTHOR
           <figcaption class="pj-quote--author">
-            #{t_authored_by} #{jdata["author"]}
+            #{localize("authored_by")} #{jdata["author"]}
           </figcaption>
         AUTHOR
       end
-    end
-
-    def t_authored_by
-      @t_authored_by ||= site.data["i18n"][page_locale]["global"]["authored_by"]
     end
 
     def output(text, icon)
