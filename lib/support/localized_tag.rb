@@ -2,6 +2,10 @@
 
 module Jekyll
   class LocalizedTag < Liquid::Tag
+    def site
+      @site ||= @context.registers[:site]
+    end
+
     def page
       @page ||= @context.registers[:page].to_liquid
     end

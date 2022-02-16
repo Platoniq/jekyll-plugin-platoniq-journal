@@ -32,10 +32,6 @@ module Jekyll
       @jdata ||= JSON.parse(@input) if !@input.nil? && !@input.empty?
     end
 
-    def site
-      @site ||= @context.registers[:site]
-    end
-
     def icon_file_path
       # @icon_file_path ||=
       if !jdata.nil? && !jdata["icon"].empty?
@@ -75,7 +71,7 @@ module Jekyll
     end
 
     def inclusion
-      @inclusion ||= @site.inclusions[icon_file_path]
+      @inclusion ||= site.inclusions[icon_file_path]
     end
 
     ## Methods below from Jekyll::Tags::OptimizedIncludeTag
@@ -83,11 +79,11 @@ module Jekyll
     ##
 
     def locate_include_file(file)
-      @site.includes_load_paths.each do |dir|
+      site.includes_load_paths.each do |dir|
         path = PathManager.join(dir, file)
-        return Inclusion.new(@site, dir, file) if valid_include_file?(path, dir)
+        return Inclusion.new(site, dir, file) if valid_include_file?(path, dir)
       end
-      raise IOError, could_not_locate_message(file, @site.includes_load_paths, @site.safe)
+      raise IOError, could_not_locate_message(file, site.includes_load_paths, site.safe)
     end
 
     def valid_include_file?(path, dir)
@@ -95,7 +91,7 @@ module Jekyll
     end
 
     def outside_scope?(path, dir)
-      @site.safe && !realpath_prefixed_with?(path, dir)
+      site.safe && !realpath_prefixed_with?(path, dir)
     end
 
     def realpath_prefixed_with?(path, dir)
