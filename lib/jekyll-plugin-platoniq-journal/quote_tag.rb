@@ -5,6 +5,7 @@
 module Jekyll
   class QuoteBlockTag < Liquid::Block
     include JekyllPluginPlatoniqJournal::Base
+    include JekyllPluginPlatoniqJournal::IncludesFile
 
     def initialize(tag_name, input, tokens)
       super

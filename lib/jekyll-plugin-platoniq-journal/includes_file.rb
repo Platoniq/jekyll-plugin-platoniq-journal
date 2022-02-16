@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Jekyll
+module JekyllPluginPlatoniqJournal
   module IncludesFile
     def inclusion
       @inclusion ||= @site.inclusions[icon_file_path]
