@@ -64,8 +64,8 @@ To quote or not to quote: That is the question.
 Quote block with params:
 
 ```liquid
-{% quote { "author": "Bitnet Shakespeares", 
-           "icon": "svg/icon-quote_alt.liquid"} %}
+{% quote { "author": "Wwwilliam Shakespeare", 
+           "icon": "svg/icon-quote_alt.liquid" } %}
 
 To quote or not to quote: That is the question.
 {% endquote %}
