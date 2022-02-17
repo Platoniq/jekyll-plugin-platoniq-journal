@@ -48,7 +48,7 @@ module Jekyll
         <blockquote>
           #{icon}
 
-          #{text}
+          #{text}"
         </blockquote>
       QUOTE
     end
