@@ -12,8 +12,8 @@ module JekyllPluginPlatoniqJournal
 
     def locate_include_file(file)
       site.includes_load_paths.each do |dir|
-        path = PathManager.join(dir, file)
-        return Inclusion.new(site, dir, file) if valid_include_file?(path, dir)
+        path = Jekyll::PathManager.join(dir, file)
+        return Jekyll::Inclusion.new(site, dir, file) if valid_include_file?(path, dir)
       end
       raise IOError, could_not_locate_message(file, @site.includes_load_paths, @site.safe)
     end
