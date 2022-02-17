@@ -23,6 +23,28 @@ module Jekyll
         @icon = inclusion.render(context)
       end
 
+      render_all
+    end
+
+    private
+
+    def jdata
+      @jdata ||= if !@input.nil? && !@input.empty?
+                   JSON.parse(@input)
+                 else
+                   JSON.parse({ :example => "123" })
+                 end
+    end
+
+    def icon_file_path
+      @icon_file_path ||= if !jdata.nil? && jdata["icon"]
+                            jdata["icon"]
+                          else
+                            "svg/icon-arrow_leftup.liquid"
+                          end
+    end
+
+    def render_all
       output = []
 
       output << %(<ul class="pj-numbers">)
@@ -42,24 +64,6 @@ module Jekyll
       output << %(</ul>)
 
       output.join
-    end
-
-    private
-
-    def jdata
-      @jdata ||= if !@input.nil? && !@input.empty?
-                   JSON.parse(@input)
-                 else
-                   JSON.parse({ :example => "123" })
-                 end
-    end
-
-    def icon_file_path
-      @icon_file_path ||= if !jdata.nil? && jdata["icon"]
-                            jdata["icon"]
-                          else
-                            "svg/icon-arrow_leftup.liquid"
-                          end
     end
   end
 end
