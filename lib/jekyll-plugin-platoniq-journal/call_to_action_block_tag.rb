@@ -11,7 +11,7 @@ module Jekyll
     end
 
     def render(context)
-      text = super
+      super
       @context = context
       @site = site
 

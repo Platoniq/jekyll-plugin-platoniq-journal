@@ -35,10 +35,10 @@ module Jekyll
 
     def include_file_path
       @include_file_path ||= if !jdata.nil? && jdata["icon"]
-                            jdata["icon"]
-                          else
-                            "svg/icon-quote.liquid"
-                          end
+                               jdata["icon"]
+                             else
+                               "svg/icon-quote.liquid"
+                             end
     end
 
     def quote(text, icon)

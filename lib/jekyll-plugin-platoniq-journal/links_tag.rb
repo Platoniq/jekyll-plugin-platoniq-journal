@@ -34,10 +34,10 @@ module Jekyll
 
     def include_file_path
       @include_file_path ||= if !jdata.nil? && jdata["icon"]
-                            jdata["icon"]
-                          else
-                            "svg/icon-link.liquid"
-                          end
+                               jdata["icon"]
+                             else
+                               "svg/icon-link.liquid"
+                             end
     end
 
     def render_all
