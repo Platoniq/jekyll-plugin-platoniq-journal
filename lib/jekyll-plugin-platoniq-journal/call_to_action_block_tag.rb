@@ -2,6 +2,9 @@
 
 module Jekyll
   class CallToActionBlockTag < Liquid::Block
+    include JekyllPluginPlatoniqJournal::Base
+    include JekyllPluginPlatoniqJournal::IncludesFile
+
     def initialize(tag_name, input, tokens)
       super
       @input = input
@@ -9,29 +12,30 @@ module Jekyll
 
     def render(context)
       text = super
+      @context = context
+      @site = site
 
-      jdata = if !@input.nil? && !@input.empty?
-                JSON.parse(@input)
-              else
-                JSON.parse({ :example => "123" })
-              end
+      @site.inclusions[include_file_path] ||= locate_include_file(include_file_path)
+      add_include_to_dependency(inclusion, context) if site.config["incremental"]
+      include_call_to_action = nil
+      context.stack do
+        context["include"] = jdata
+        include_call_to_action = inclusion.render(context)
+      end
 
-      output = []
+      include_call_to_action
+    end
 
-      output << %(<div class="px-4 py-5 my-5 text-center">)
-      output << Kramdown::Document.new(text).to_html if text
-      output << <<~CTA
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="#{jdata["url"]}" class="btn btn-primary btn-lg px-4 gap-3">
-            #{jdata["label"]}
-          </a>
-        </div>
-      CTA
-      output << %(</div>)
+    private
 
-      output.join
+    def jdata
+      @jdata ||= JSON.parse(@context[@input.strip]) if !@input.nil? && !@input.empty?
+    end
+
+    def include_file_path
+      @include_file_path ||= "plugins/call_to_action.liquid"
     end
   end
 end
 
-Liquid::Template.register_tag("cta", Jekyll::CallToActionBlockTag)
+Liquid::Template.register_tag("call_to_action", Jekyll::CallToActionBlockTag)

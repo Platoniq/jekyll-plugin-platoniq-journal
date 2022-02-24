@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# require "byebug"
+
 module JekyllPluginPlatoniqJournal
   module Base
     def site
