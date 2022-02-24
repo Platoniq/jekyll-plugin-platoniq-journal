@@ -42,13 +42,13 @@ Tags can be used in a `.md` file
 ### links tag
 
 ```
-{% links {
-    "title": "Our references", "items": [
-            { "url": "https://platoniq.net", "title": "Link to the galaxy and beyond"},
-            { "url": "https://platoniq.net", "title": "Visit Planet Toniq"}
-        ]
-    }
-%}
+{% links { "title": "Our references", "items": [ { "url": "https://platoniq.net", "title": "Link to the galaxy and beyond"}, { "url": "https://platoniq.net", "title": "Visit Planet Toniq"} ] } %}
+```
+
+### documents tag
+
+```
+{% documents { "title": "Our references", "items": [ { "file": "https://platoniq.net", "title": "Link to the galaxy and beyond"}, { "file": "https://platoniq.net", "title": "Visit Planet Toniq"} ] } %}
 ```
 
 ### quote block tag
