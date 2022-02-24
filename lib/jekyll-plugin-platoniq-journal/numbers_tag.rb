@@ -48,15 +48,15 @@ module Jekyll
       output = []
 
       output << %(<ul class="pj-numbers">)
-      jdata.each do |key, value|
+      jdata["items"].each do |item|
         output << <<~NUM
           <li>
             <strong>
-              #{value}
+              #{item["number"]}
             </strong>
             <span class="pj-number--description">
               <span class="pj-number--icon">#{@icon}</span>
-              #{key}
+              #{item["label"]}
             </span>
           </li>
         NUM
