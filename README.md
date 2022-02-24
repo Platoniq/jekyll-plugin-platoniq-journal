@@ -25,12 +25,12 @@ Tags can be used in a `.md` file
 ### call to action block tag
 
 ```
-{% cta {"url":"https://platoniq.net", "label": "call to action button"} %}
+{% call_to_action {"url":"https://platoniq.net", "label": "call to action button"} %}
 # This is my CTA
 
 - one item
 - two item
-{% endcta %}
+{% endcall_to_action %}
 ```
 
 ### numbers tag
