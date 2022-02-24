@@ -39,7 +39,7 @@ module Jekyll
     def render_all
       output = []
 
-      output << %(<section class="pj-links">)
+      output << %(<section class="pj-documents">)
       output << render_title unless jdata["title"].empty?
       output << render_list if jdata["items"].any?
       output << %(</section>)
@@ -54,7 +54,7 @@ module Jekyll
     def render_list
       output = []
 
-      output << %(<ul class="llistat-links">)
+      output << %(<ul>)
       output << jdata["items"].map { |item| render_item(item) }
       output << %(</ul>)
 
