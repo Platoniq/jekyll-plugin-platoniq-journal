@@ -3,7 +3,7 @@
 module JekyllPluginPlatoniqJournal
   module IncludesFile
     def inclusion
-      @inclusion ||= @site.inclusions[icon_file_path]
+      @inclusion ||= @site.inclusions[include_file_path]
     end
 
     ## Methods below from Jekyll::Tags::OptimizedIncludeTag
