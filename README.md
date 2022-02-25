@@ -36,7 +36,7 @@ Tags can be used in a `.md` file
 ### numbers tag
 
 ```
-{% numbers {"first label":"0.123", "second label":"50%", "third label": "123"} %}
+{% numbers { "items": [ { "label": "first label", "number": "0.123"}, { "label": "second label", "number": "50%" }, { "label": "third label", "number":  "123" } ] } %}
 ```
 
 ### links tag
