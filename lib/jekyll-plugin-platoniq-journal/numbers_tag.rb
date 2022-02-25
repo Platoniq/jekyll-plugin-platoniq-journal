@@ -47,21 +47,21 @@ module Jekyll
     def render_all
       output = []
 
-      output << %(<ul class="pj-numbers">)
+      output << %(<dl class="pj-numbers">)
       jdata["items"].each do |item|
         output << <<~NUM
-          <li>
-            <strong>
-              #{item["number"]}
-            </strong>
-            <span class="pj-number--description">
-              <span class="pj-number--icon">#{@icon}</span>
+          <div class="pj-numbers--item">
+            <dt>
+              <span class="pj-numbers--icon">#{@icon}</span>
               #{item["label"]}
-            </span>
-          </li>
+            </dt>
+            <dd>
+              #{item["number"]}
+            </dd>
+          </div>
         NUM
       end
-      output << %(</ul>)
+      output << %(</dl>)
 
       output.join
     end
