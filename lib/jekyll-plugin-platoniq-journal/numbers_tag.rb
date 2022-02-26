@@ -47,10 +47,10 @@ module Jekyll
     def render_all
       output = []
 
-      output << %(<dl class="pj-numbers">)
+      output << %(<div class="pj-numbers">)
       jdata["items"].each do |item|
         output << <<~NUM
-          <div class="pj-numbers--item">
+          <dl class="pj-numbers--item">
             <dt>
               <span class="pj-numbers--icon">#{@icon}</span>
               #{item["label"]}
@@ -58,10 +58,10 @@ module Jekyll
             <dd>
               #{item["number"]}
             </dd>
-          </div>
+          </dl>
         NUM
       end
-      output << %(</dl>)
+      output << %(</div>)
 
       output.join
     end
