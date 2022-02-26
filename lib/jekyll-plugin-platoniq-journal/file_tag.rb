@@ -49,7 +49,7 @@ module Jekyll
 
           <div class="resource-box__text">
             <h3>#{jdata["title"]}</h3>
-            <h4>#{jdata["info"]}</h4>
+            #{info}
           </div>
 
           <div class="resource-box__cta">
@@ -62,6 +62,14 @@ module Jekyll
           </div>
         </section>
       FILE
+    end
+
+    def info
+      return unless !jdata["info"].nil? && !jdata["info"].empty?
+
+      <<~INFO
+        <h4>#{jdata["info"]}</h4>
+      INFO
     end
   end
 end
