@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Jekyll
-  class FileTag < Liquid::Block
+  class FileTag < Liquid::Tag
     include JekyllPluginPlatoniqJournal::Base
     include JekyllPluginPlatoniqJournal::IncludesFile
 
@@ -42,18 +42,20 @@ module Jekyll
 
     def output
       <<~FILE
-        <section class="cta-box cta-box--file">
-          <div class="cta-box__img">
-            <img src="#{jdata["image"]} alt="#{jdata["title"]}"/>
+        <section class="resource-box">
+          <div class="resource-box__img">
+            <img src="#{jdata["image"]}" alt="#{jdata["title"]}"/>
           </div>
 
-          <div class="cta-box__text">
+          <div class="resource-box__text">
             <h3>#{jdata["title"]}</h3>
           </div>
 
-          <div class="cta-box__cta">
+          <div class="resource-box__cta">
             <a href="#{jdata["file"]}" target="_blank" class="btn btn--negatiu">
-              #{@icon}
+              <span class="btn__icon btn__icon--left">
+                #{@icon}
+              </span>
               <span class="btn__label">#{localize("download")}</span>
             </a>
           </div>
