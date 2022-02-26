@@ -49,6 +49,7 @@ module Jekyll
 
           <div class="resource-box__text">
             <h3>#{jdata["title"]}</h3>
+            <h4>#{jdata["info"]}</h4>
           </div>
 
           <div class="resource-box__cta">
