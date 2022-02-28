@@ -51,6 +51,13 @@ Tags can be used in a `.md` file
 {% documents { "title": "Our references", "items": [ { "file": "https://platoniq.net", "title": "Link to the galaxy and beyond"}, { "file": "https://platoniq.net", "title": "Visit Planet Toniq"} ] } %}
 ```
 
+
+### gallery tag
+
+```
+{% gallery { "images": [ { "path": "/media/whatever1.png", "alt": "Picture of the galaxy when it was born", "credits": "Ptolemy" }, { "path": "/media/whatever2.png", "alt": "Pie chart of my dreams", "credits": "Anonymous" } ] %}
+```
+
 ### quote block tag
 
 Basic quote block:
