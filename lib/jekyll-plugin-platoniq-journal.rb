@@ -11,6 +11,7 @@ require "jekyll-plugin-platoniq-journal/documents_tag"
 require "jekyll-plugin-platoniq-journal/links_tag"
 require "jekyll-plugin-platoniq-journal/numbers_tag"
 require "jekyll-plugin-platoniq-journal/quote_tag"
+require "jekyll-plugin-platoniq-journal/stickers_tag"
 
 module JekyllPluginPlatoniqJournal
 end

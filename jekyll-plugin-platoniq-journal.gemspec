@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-plugin-platoniq-journal"
-  spec.version       = "0.0.13"
+  spec.version       = "0.0.14"
   spec.authors       = ["Agustí B.R."]
   spec.email         = ["agusti@platoniq.net"]
 
