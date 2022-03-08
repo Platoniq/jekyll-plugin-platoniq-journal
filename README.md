@@ -78,6 +78,12 @@ To quote or not to quote: That is the question.
 {% endquote %}
 ```
 
+### stickers tag
+
+```
+{% stickers { "layout": "layout-one", "sticker_one": "/media/stickers/wilder-journal-x/thumbs_up.png", "sticker_one_animation": "animation-glitch", "sticker_two": "/media/stickers/wilder-journal-x/heart.png", "sticker_two_animation": "animation-none" } %}
+```
+
 ## License
 
 The theme is available as open source under the terms of the [GNU AFFERO GENERAL PUBLIC LICENSE](https://opensource.org/licenses/AGPL-3.0).
