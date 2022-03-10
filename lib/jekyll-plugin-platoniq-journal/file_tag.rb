@@ -53,8 +53,8 @@ module Jekyll
           </div>
 
           <div class="resource-box__cta">
-            <a href="#{jdata["file"]}" target="_blank" class="btn btn--negatiu">
-              <span class="btn__icon btn__icon--left">
+            <a href="#{jdata["file"]}" target="_blank" class="btn btn-negative">
+              <span class="btn__icon btn__icon-left">
                 #{@icon}
               </span>
               <span class="btn__label">#{localize("download")}</span>

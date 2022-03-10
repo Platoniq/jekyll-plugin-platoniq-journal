@@ -50,9 +50,9 @@ module Jekyll
       output << %(<div class="pj-numbers">)
       jdata["items"].each do |item|
         output << <<~NUM
-          <dl class="pj-numbers--item">
+          <dl class="pj-numbers-item">
             <dt>
-              <span class="pj-numbers--icon">#{@icon}</span>
+              <span class="pj-numbers-icon">#{@icon}</span>
               #{item["label"]}
             </dt>
             <dd>

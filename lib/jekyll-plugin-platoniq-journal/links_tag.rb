@@ -64,8 +64,8 @@ module Jekyll
     def render_item(item)
       <<~LINK
         <li>
-          <a href="#{item["url"]}" class="link link--extern">
-            <span class="link__icon link__icon--left">
+          <a href="#{item["url"]}" class="link link-external"  target="_blank">
+            <span class="link__icon link__icon-left">
               #{@icon}
             </span>
             <span class="link__label">

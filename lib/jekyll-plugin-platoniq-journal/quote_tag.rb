@@ -54,7 +54,7 @@ module Jekyll
     def author
       if !jdata.nil? && jdata["author"]
         @author ||= <<~AUTHOR
-          <figcaption class="pj-quote--author">
+          <figcaption class="pj-quote-author">
             #{localize("authored_by")} #{jdata["author"]}
           </figcaption>
         AUTHOR
