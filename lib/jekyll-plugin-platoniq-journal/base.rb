@@ -13,7 +13,7 @@ module JekyllPluginPlatoniqJournal
     end
 
     def page_locale
-      @page_locale ||= page["locale"] || "en"
+      @page_locale ||= page["locale"] || "es"
     end
 
     def localize(key)

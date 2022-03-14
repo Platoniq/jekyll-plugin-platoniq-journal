@@ -54,7 +54,7 @@ module Jekyll
     def render_list
       output = []
 
-      output << %(<ul class="llistat-links">)
+      output << %(<ul>)
       output << jdata["items"].map { |item| render_item(item) }
       output << %(</ul>)
 
