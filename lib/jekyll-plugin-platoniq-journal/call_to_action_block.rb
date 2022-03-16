@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module Jekyll
-  class CallToActionBlockTag < Liquid::Block
+  class CallToActionBlock < Liquid::Block
     include JekyllPluginPlatoniqJournal::Base
     include JekyllPluginPlatoniqJournal::IncludesFile
 
-    def initialize(tag_name, input, tokens)
+    def initialize(block_name, input, tokens)
       super
       @input = input
     end
@@ -38,4 +38,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag("call_to_action", Jekyll::CallToActionBlockTag)
+Liquid::Template.register_tag("call_to_action", Jekyll::CallToActionBlock)
