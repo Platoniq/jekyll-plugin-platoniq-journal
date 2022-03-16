@@ -52,13 +52,16 @@ module Jekyll
     end
 
     def author
-      if !jdata.nil? && jdata["author"]
-        @author ||= <<~AUTHOR
-          <figcaption class="pj-quote-author">
-            #{localize("authored_by")} #{jdata["author"]}
-          </figcaption>
-        AUTHOR
-      end
+      return if jdata.nil?
+
+      author_name = jdata["author"]
+      return if author_name.nil? || author_name == ""
+
+      @author ||= <<~AUTHOR
+        <figcaption class="pj-quote-author">
+          #{localize("authored_by")} #{author_name}
+        </figcaption>
+      AUTHOR
     end
 
     def output(text, icon)
