@@ -52,7 +52,7 @@ module Jekyll
             #{info}
           </div>
 
-          <div class="resource-box__cta">
+          <div class="resource-box__button">
             <a href="#{jdata["file"]}" target="_blank" class="btn btn-negative">
               <span class="btn__icon btn__icon-left">
                 #{@icon}
