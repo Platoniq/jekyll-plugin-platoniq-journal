@@ -59,7 +59,7 @@ module Jekyll
 
       @author ||= <<~AUTHOR
         <figcaption class="pj-quote-author">
-          #{localize("authored_by")} #{author_name}
+          #{author_name}
         </figcaption>
       AUTHOR
     end
