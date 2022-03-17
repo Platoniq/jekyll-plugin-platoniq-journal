@@ -42,17 +42,17 @@ module Jekyll
 
     def output
       <<~FILE
-        <section class="resource-box">
-          <div class="resource-box__img">
+        <section class="pj-file">
+          <div class="pj-file__img">
             <img src="#{jdata["image"]}" alt="#{jdata["title"]}"/>
           </div>
 
-          <div class="resource-box__text">
-            <h3>#{jdata["title"]}</h3>
+          <div class="pj-file__text">
+            <span class="pj-file__text__title">#{jdata["title"]}</span>
             #{info}
           </div>
 
-          <div class="resource-box__button">
+          <div class="pj-file__button">
             <a href="#{jdata["file"]}" target="_blank" class="btn btn-negative">
               <span class="btn__icon btn__icon-left">
                 #{@icon}
@@ -68,7 +68,7 @@ module Jekyll
       return unless !jdata["info"].nil? && !jdata["info"].empty?
 
       <<~INFO
-        <h4>#{jdata["info"]}</h4>
+        <span class="pj-file__text__data">#{jdata["info"]}</span>
       INFO
     end
   end
