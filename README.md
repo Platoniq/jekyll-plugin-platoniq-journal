@@ -51,6 +51,12 @@ Tags can be used in a `.md` file
 {% documents { "title": "Our references", "items": [ { "file": "https://platoniq.net", "title": "Link to the galaxy and beyond"}, { "file": "https://platoniq.net", "title": "Visit Planet Toniq"} ] } %}
 ```
 
+### file tag
+
+```
+{% file { "title": "A very cool file", "info": "4kB PDF", "file": "https://cool-pdf.org/file1.pdf", "image": "/media/whatever.png", "button_text": "Download", "button_icon": "icon-download" } %}
+```
+
 
 ### gallery tag
 
