@@ -39,6 +39,12 @@ Tags can be used in a `.md` file
 {% numbers { "items": [ { "label": "first label", "number": "0.123"}, { "label": "second label", "number": "50%" }, { "label": "third label", "number":  "123" } ] } %}
 ```
 
+### questions tag
+
+```
+{% questions { "items": [ { "question": "Are you there?" }, { "question": "Is it true?" } ] } %}
+```
+
 ### links tag
 
 ```

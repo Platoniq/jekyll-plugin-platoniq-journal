@@ -22,6 +22,7 @@ module JekyllPluginPlatoniqJournal
 
       @context.stack do
         @context[include_name] = jdata.merge("content" => content)
+
         include_template = inclusion.render(@context)
       end
 
@@ -41,7 +42,7 @@ module JekyllPluginPlatoniqJournal
     private
 
     def jdata
-      @jdata ||= JSON.parse(@input.strip) if !@input.nil? && !@input.empty?
+      @jdata ||= (JSON.parse(@input.strip) if !@input.nil? && !@input.empty?) || {}
     end
 
     def include_file_path

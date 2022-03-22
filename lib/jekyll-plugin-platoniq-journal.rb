@@ -12,6 +12,7 @@ require "jekyll-plugin-platoniq-journal/file_tag"
 require "jekyll-plugin-platoniq-journal/documents_tag"
 require "jekyll-plugin-platoniq-journal/links_tag"
 require "jekyll-plugin-platoniq-journal/numbers_tag"
+require "jekyll-plugin-platoniq-journal/questions_tag"
 require "jekyll-plugin-platoniq-journal/quote_block"
 require "jekyll-plugin-platoniq-journal/stickers_tag"
 
